@@ -3,7 +3,7 @@ import uvicorn
 from application.bootstrap import bootstrap
 
 from .app import app
-from .middlewares import context_middleware as _
+from .middlewares import context_middleware
 
 # bootstrap application
 bootstrap()

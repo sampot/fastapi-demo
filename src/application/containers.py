@@ -5,6 +5,7 @@ from repositories.sa_user_repository import SAUserRepository
 
 
 class Container(containers.DeclarativeContainer):
+    config = providers.Configuration()
 
     uc_context = providers.Singleton(SAUseCaseContext)
 
