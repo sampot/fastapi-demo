@@ -1,8 +1,9 @@
 import uvicorn
 
-from .app import app
 from application.bootstrap import bootstrap
-from .middlewares import context_middleware
+
+from .app import app
+from .middlewares import context_middleware as _
 
 # bootstrap application
 bootstrap()

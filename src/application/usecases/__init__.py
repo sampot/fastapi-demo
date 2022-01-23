@@ -13,7 +13,8 @@ def usecase(func):
     """usecase function decorator"""
 
     async def wrapper(*args, **kwargs):
-        # the use-case context must be created first by, e.g., a HTTP middleware.
+        # the use-case context must be created first by,
+        # e.g., a HTTP middleware.
         ctx = get_uc_context()
         print("Session began.")
 

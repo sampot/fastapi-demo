@@ -37,7 +37,7 @@ class SAUseCaseContext(UseCaseContext):
             raise Exception("No associated session.")
 
         session.commit()
-        print('session committed.')
+        print("session committed.")
 
     def rollback(self):
         """roll back the transaction"""

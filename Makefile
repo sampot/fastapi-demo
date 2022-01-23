@@ -7,10 +7,10 @@ test:  ## Run tests
 .PHONY: test
 
 lint:  ## Run linting
-	poetry run black --check .
-	poetry run isort -c .
-	poetry run flake8 .
-	poetry run pydocstyle .
+	poetry run black --check ./src
+	poetry run isort -c ./src
+	poetry run flake8 ./src
+	poetry run pydocstyle ./src
 .PHONY: lint
 
 lint-fix:  ## Run autoformatters

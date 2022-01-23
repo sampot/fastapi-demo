@@ -1,4 +1,3 @@
-from click import echo
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy.orm import registry, sessionmaker
 

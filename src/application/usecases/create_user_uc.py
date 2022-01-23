@@ -5,7 +5,6 @@ from dependency_injector.wiring import Provide, inject
 from pydantic import BaseModel
 
 from application.containers import Container
-from application.usecases import usecase
 from domain.entities.user import UserEntity
 from domain.repositories.user_repository import UserRepository
 
