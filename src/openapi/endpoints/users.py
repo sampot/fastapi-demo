@@ -1,7 +1,8 @@
 from typing import List
-from application.usecases import create_user_uc, get_users_uc
+
 from fastapi import APIRouter
 
+from application.usecases import create_user_uc, get_users_uc
 from domain.entities.user import User
 
 router = APIRouter(prefix="/users", tags=["Users"])

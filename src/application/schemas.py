@@ -1,10 +1,11 @@
-from pydantic import BaseModel
 from typing import Any, List
+
+from pydantic import BaseModel
 
 
 class ListResut(BaseModel):
     data: List[Any] = []
-    object: str = 'list'
+    object: str = "list"
     next_id: str = ""
     num_of_items: int = 0
 

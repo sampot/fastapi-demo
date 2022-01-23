@@ -1,8 +1,9 @@
 from typing import Any, Optional
-from shared.domain import DomainEntity
-from pydantic.dataclasses import dataclass
 
 from cuid import cuid
+from pydantic.dataclasses import dataclass
+
+from shared.domain import DomainEntity
 
 
 @dataclass()

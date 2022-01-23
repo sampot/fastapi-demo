@@ -1,7 +1,6 @@
-from contextvars import ContextVar
-from typing import Any, Dict
 from collections import UserDict
-from contextvars import copy_context
+from contextvars import ContextVar, copy_context
+from typing import Any, Dict
 
 _request_scope_context_storage: ContextVar[Dict[Any, Any]] = ContextVar(
     "example_context", dict()

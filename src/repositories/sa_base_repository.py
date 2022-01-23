@@ -6,4 +6,4 @@ class SABaseRepository(Repository):
     def __init__(self, uc_context: SAUseCaseContext) -> None:
         super().__init__()
         self.uc_context = uc_context
-        print('uc_context set')
+        print("uc_context set")

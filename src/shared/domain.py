@@ -1,7 +1,8 @@
-from typing import Any, Dict, Optional
 from abc import ABC
-from pydantic.dataclasses import dataclass
+from typing import Any, Dict, Optional
+
 from cuid import cuid
+from pydantic.dataclasses import dataclass
 
 
 @dataclass

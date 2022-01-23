@@ -1,6 +1,6 @@
 from click import echo
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy.orm import sessionmaker, registry
+from sqlalchemy import MetaData, create_engine
+from sqlalchemy.orm import registry, sessionmaker
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///"
 

@@ -1,7 +1,9 @@
-from .endpoints import auth, users, root
 import uvicorn
 from fastapi import FastAPI
+
 from application.bootstrap import bootstrap
+
+from .endpoints import auth, root, users
 
 title = "Example API"
 

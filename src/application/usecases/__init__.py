@@ -1,6 +1,6 @@
+from dependency_injector.wiring import Provide, inject
 
 from ..containers import Container
-from dependency_injector.wiring import Provide, inject
 from ..context import UseCaseContext
 
 
@@ -10,12 +10,13 @@ def get_uc_context(ctx=Provide[Container.uc_context]) -> UseCaseContext:
 
 
 def usecase(func):
-    """ usecase function decorator """
+    """usecase function decorator"""
+
     async def wrapper(*args, **kwargs):
         # the use-case context must be created first by, e.g., a HTTP middleware.
         ctx = get_uc_context()
         ctx.begin()
-        print('Session began.')
+        print("Session began.")
 
         try:
             return await func(*args, **kwargs)
@@ -25,7 +26,7 @@ def usecase(func):
         else:
             ctx.commit()
         finally:
-            print('Session closed')
+            print("Session closed")
             ctx.close()
 
     return wrapper

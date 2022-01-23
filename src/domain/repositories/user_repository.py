@@ -1,12 +1,12 @@
 from abc import abstractmethod
 from typing import List
-from shared.domain import Repository
 
 from domain.entities.user import User
+from shared.domain import Repository
 
 
 class UserRepository(Repository):
-    """ Contractual interface for UserRepository """
+    """Contractual interface for UserRepository"""
 
     def __init__(self) -> None:
         super().__init__()

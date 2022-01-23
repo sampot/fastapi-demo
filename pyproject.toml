@@ -20,6 +20,10 @@ greenlet = "^1.1.2"
 pytest = "6.2.5"
 black = {version = "^21.12b0", allow-prereleases = true}
 autopep8 = "^1.6.0"
+pydocstyle = "^6.1.1"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+mypy = "^0.931"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
