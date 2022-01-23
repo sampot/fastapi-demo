@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "openapi"
+version = "0.1.0"
+description = ""
+authors = ["Sampot <sam@eavatar.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.72.0"}
+dependency-injector = "^4.37.0"
+SQLAlchemy = "^1.4.31"
+setuptools = "^60.5.0"
+alembic = "^1.7.5"
+cuid = "^0.3"
+aiosqlite = "^0.17.0"
+asyncpg = "^0.25.0"
+greenlet = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "6.2.5"
+black = {version = "^21.12b0", allow-prereleases = true}
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
