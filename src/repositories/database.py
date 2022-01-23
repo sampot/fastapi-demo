@@ -2,7 +2,7 @@ from click import echo
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy.orm import registry, sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./db/example.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,

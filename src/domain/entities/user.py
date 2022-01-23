@@ -7,5 +7,5 @@ from shared.domain import DomainEntity
 
 
 @dataclass()
-class User(DomainEntity):
+class UserEntity(DomainEntity):
     username: str

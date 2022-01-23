@@ -21,6 +21,7 @@ class SAUseCaseContext(UseCaseContext):
         if not session:
             session = self.session_factory()
             _uc_context_storage.set(session)
+            print("Session created.")
 
         return session
 
@@ -36,6 +37,7 @@ class SAUseCaseContext(UseCaseContext):
             raise Exception("No associated session.")
 
         session.commit()
+        print('session committed.')
 
     def rollback(self):
         """roll back the transaction"""
@@ -44,9 +46,11 @@ class SAUseCaseContext(UseCaseContext):
             raise Exception("No associated session.")
 
         session.rollback()
+        print("session rollbacked.")
 
     def close(self):
         session = _uc_context_storage.get()
         if session:
             _uc_context_storage.set(None)
             session.close()
+            print("session closed.")

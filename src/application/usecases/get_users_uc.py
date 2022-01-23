@@ -7,16 +7,15 @@ from pydantic import BaseModel
 
 from application.containers import Container
 from application.usecases import usecase
-from domain.entities.user import User
+from domain.entities.user import UserEntity
 from domain.repositories.user_repository import UserRepository
 
 logger = logging.Logger(__name__)
 
 
-@usecase
 @inject
 async def run(
     userRepo: UserRepository = Provide[Container.user_repository],
-) -> List[User]:
+) -> List[UserEntity]:
     result = await userRepo.get_all()
     return result

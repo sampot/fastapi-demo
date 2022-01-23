@@ -15,16 +15,16 @@ def usecase(func):
     async def wrapper(*args, **kwargs):
         # the use-case context must be created first by, e.g., a HTTP middleware.
         ctx = get_uc_context()
-        ctx.begin()
         print("Session began.")
 
         try:
-            return await func(*args, **kwargs)
-        except:
-            ctx.rollback()
-            raise
-        else:
+            res = await func(*args, **kwargs)
             ctx.commit()
+            return res
+
+        except Exception as e:
+            ctx.rollback()
+            raise e
         finally:
             print("Session closed")
             ctx.close()

@@ -1,7 +1,7 @@
 from abc import abstractmethod
 from typing import List
 
-from domain.entities.user import User
+from domain.entities.user import UserEntity
 from shared.domain import Repository
 
 
@@ -12,9 +12,9 @@ class UserRepository(Repository):
         super().__init__()
 
     @abstractmethod
-    async def save(self, user: User) -> User:
+    async def save(self, user: UserEntity) -> UserEntity:
         raise NotImplementedError
 
     @abstractmethod
-    async def get_all(self) -> List[User]:
+    async def get_all(self) -> List[UserEntity]:
         raise NotImplementedError
